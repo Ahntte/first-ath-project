@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+         두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환하는 함수, solution을 완성해 보세요.
+         배열의 맨 앞에 최대공약수, 그다음 최소공배수를 넣어 반환하면 됩니다.
+         예를 들어 두 수 3, 12의 최대공약수는 3, 최소공배수는 12이므로 solution(3, 12)는 [3, 12]를 반환해야 합니다.
+
+         제한 사항
+         두 수는 1이상 1000000이하의 자연수입니다.
+         입출력 예
+         n	m	return
+         3	12	[3, 12]
+         2	5	[1, 10]
+      */
+      function solution(n, m) {
+        const num1 = n;
+        const num2 = m;
+        let multipleN = 0;
+        let multipleM = 0;
+        let divisorArr1 = [];
+        let divisorArr2 = [];
+        let i = 1;
+        let j = 1;
+        // 최소공배수 구하는 로직
+        // n : n X 자연수를 곱하여 만들어지는 수들을 n의 배수라고함
+        // nx1, nx2, nx3 .... (계속 무한히 돌려 곱해)
+        // m도 이하동문
+        // 계속 돌리다가 n에 대한 결괏값이랑 m에 대한 결괏값을 돌릴때마다 매 순간순간 비교하여 최초로 같아지는 그 값이 최소공배수임(최소값)
+        while (i) {
+          i++;
+          multipleN = num1 * i;
+          multipleM = num2 * i;
+          if (multipleN == multipleM) {
+            return;
+          }
+          break;
+        }
+        while (j) {
+          j++;
+          if (num1 % j == 0) {
+            divisorArr1.push(j);
+          }
+          if (num2 % j == 0) {
+            divisorArr2.push(j);
+          }
+        }
+        //정수n을 정수d 로 나누었을 때 나누어떨어지는 경우, 즉 몫이 정수이고 나머지가 0인 경우 d를 의 n약수라고 한다
+        //루프를 돌려 나누고 나누엇을때 나머지가 0인 경우에만 값을 배열에 할당하고 그 배열에서 가장 큰 값을 추출한다
+        return multipleM;
+      }
+      console.log(solution(2, 3));
+    </script>
+  </body>
+</html>

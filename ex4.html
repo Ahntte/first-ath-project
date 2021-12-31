@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container1 {
+        width: auto; /*width값이 auto이면(기본값)이면 부모요소의 너비를 기준으로 width가 잡혀짐 container의 부모요소는 body이므로 문서 전체가 width크기가됨*/
+        border: 1px solid black;
+        /*container의 height값은 자동으로 auto임 width와는 다르게 부모요소의 세로 너비를 갖는것이 아니라 자식요소의 세로값을 height로 취함*/
+      }
+      .box1 {
+        border: 1px solid red;
+        width: 500px;
+        height: 500px;
+      }
+      .container2 {
+        border: 1px solid blue;
+        width: 10vw;
+        height: 200px;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="containe1">
+      <div class="box1">자식요소1</div>
+    </div>
+    <div class="containe2">
+      <div class="box2">자식요소2</div>
+    </div>
+  </body>
+</html>

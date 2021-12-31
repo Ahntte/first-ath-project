@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        animation-name: all;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+      .first {
+        animation-delay: -3s;
+        background-color: lightgreen;
+      }
+      .third {
+        animation-delay: -6s;
+        background-color: lightblue;
+      }
+      @keyframes all {
+        0% {
+          opacity: 0;
+        }
+        33.3% {
+          opacity: 1;
+        }
+        67% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+  </body>
+</html>

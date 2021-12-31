@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("https://via.placeholder.com/150/300AAA");
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <script>
+      var i = 0;
+      var images = [];
+      var slideTime = 3000; // 3 seconds
+      images[0] = "https://via.placeholder.com/150/300AAA";
+      images[1] = "https://via.placeholder.com/150/000300";
+      images[2] = "https://via.placeholder.com/150/AAA300";
+      function changePicture() {
+        document.body.style.backgroundImage = "url(" + images[i] + ")";
+        if (i < images.length - 1) {
+          i++;
+        } else {
+          i = 0;
+        }
+        setTimeout(changePicture, slideTime);
+      }
+      window.onload = changePicture;
+      document.getElementById("");
+    </script>
+  </head>
+  <body>
+    <h3>Welcome!</h3>
+    <p>Lorem ipsum dolor sit amet</p>
+  </body>
+</html>

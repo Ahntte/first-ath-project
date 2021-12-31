@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        // 정수배열 arr을 인자로 받아 그 배열에서 가장 작은수를 삭제하여 새로운 배열로 리턴
+        // 단) 정수배열의 길이가 1이면 즉, 원소가 1개밖에 없으면 -1을 채워 배열로 리턴
+        var answer = [];
+        let intArr = arr;
+        let arrNum = [];
+        let min = 0;
+        let sum = 0;
+        let result = 0;
+        /* - 내가 생각한 솔루션 - 
+         1. 정수배열을 받아옴
+         2. 받아온 정수배열을 루프를 돌려 가장 작은 수를 탐색함 : splice(): 지정한 원소를 삭제하거나 추가함
+         3. 가장 작은 수를 발견하면 삭제하여 새로운 배열로 만듦
+         
+         ex: [4,3,2,1]
+        */
+        /*  - 해결에 대한 단서 -
+          1. 배열의 최소값을 먼저 구하고
+          2. 원래 배열에서 그 최소값에 대한 원소를 삭제후 다시 리턴
+          3. 예외처리는 길이가 1이면 그냥 바로 -1로 대체하여 리턴
+        */
+        for (let i = 0; i < intArr.length; i++) {
+          //받아온 배열의 원소를 검사하기 위해 전체를 돌리기위한 for문
+          sum += intArr[i];
+        }
+        for (let j = 0; j < intArr.length; j++) {
+          result = sum - intArr[j];
+          // 더한 값들을 바로 써먹어야함
+          arrNum[j] = arrNum.push(result);
+        }
+        min = Math.min.apply(null, arrNum);
+        return arrNum;
+      }
+      console.log(solution([5, 9, 21, 3]));
+    </script>
+  </body>
+</html>

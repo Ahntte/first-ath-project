@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  /* html의 기본 폰트크기는 16px임 16px을 기준으로 모든 요소의 rem크기는 16  */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.play-time {
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: var(--steelblue);
+}
+ul {
+  margin-top: 1rem;
+  list-style: none;
+  border: 2px solid var(--steelblue);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+:root {
+  --steelblue: steelblue;
+}
+li {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  color: #ffffff;
+  background: url("./flower.jpg");
+}
+.start-btn {
+  background: var(--steelblue);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.game-text {
+  position: absolute;
+  font-size: 45px;
+  color: #ffe867;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.list0 {
+  background-position-x: 0;
+  background-position-y: 0;
+}
+.list1 {
+  background-position-x: -100px;
+  background-position-y: 0;
+}
+.list2 {
+  background-position-x: -200px;
+  background-position-y: 0;
+}
+.list3 {
+  background-position-x: -300px;
+  background-position-y: 0;
+}
+.list4 {
+  background-position-x: 0;
+  background-position-y: -100px;
+}
+.list5 {
+  background-position-x: -100px;
+  background-position-y: -100px;
+}
+.list6 {
+  background-position-x: -200px;
+  background-position-y: -100px;
+}
+.list7 {
+  background-position-x: -300px;
+  background-position-y: -100px;
+}
+.list8 {
+  background-position-x: 0;
+  background-position-y: -200px;
+}
+.list9 {
+  background-position-x: -100px;
+  background-position-y: -200px;
+}
+.list10 {
+  background-position-x: -200px;
+  background-position-y: -200px;
+}
+.list11 {
+  background-position-x: -300px;
+  background-position-y: -200px;
+}
+.list12 {
+  background-position-x: 0;
+  background-position-y: -300px;
+}
+.list13 {
+  background-position-x: -100px;
+  background-position-y: -300px;
+}
+.list14 {
+  background-position-x: -200px;
+  background-position-y: -300px;
+}
+.list15 {
+  background-position-x: -300px;
+  background-position-y: -300px;
+}

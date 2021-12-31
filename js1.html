@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Default parameter is only for undefined
+      function printMessage(text = "Nothing to display:)") {
+        console.log(text);
+      }
+      printMessage("Hello");
+      printMessage(undefined);
+      printMessage(null);
+
+      const num = -1;
+      history.go(num);
+
+      // Nullish coalescing operator
+      function printMessageNullish(text) {
+        const message = text ?? "Nothing to display:)";
+        0;
+        return message;
+      }
+      console.log(printMessageNullish(null));
+      console.log(printMessageNullish("wow"));
+    </script>
+    <label for="">
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+    </label>
+  </body>
+</html>
