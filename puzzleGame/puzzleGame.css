@@ -33,7 +33,7 @@ li {
   height: 100px;
   border: 1px solid black;
   color: #ffffff;
-  background: url("./flower.jpg");
+  background: url("./assets/flower.jpg");
 }
 .start-btn {
   background: var(--steelblue);
